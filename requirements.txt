@@ -1,0 +1,8 @@
+attr==0.3.1
+attrs==21.4.0
+Django==2.2.12
+django_debug_toolbar==3.2.4
+djangorestframework==3.13.1
+djangorestframework_simplejwt==4.8.0
+httplib2==0.14.0
+requests==2.22.0
