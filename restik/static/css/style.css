@@ -1,0 +1,166 @@
+h1 a {
+    color: #F6BA66;
+    font-family: 'Lobster';
+}
+
+body {
+    padding-left: 30px;  /* тело текста продуктов */
+    padding-right: 30px;
+    color: #fff;
+}  
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #fff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.map {
+    background-color: #D4D4D4;
+    margin-bottom: 0;
+    padding: 20px 20px 20px 20px;
+    font-family: 'Montserrat';
+    color: #fff;
+}
+
+.content {
+    margin-left: 40px;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+}
+
+br {
+    font-family: 'Montserrat';
+}
+
+.date {
+    color: #F6BA66;
+}
+
+.save {
+    float: right;
+}
+
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #000;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+
+.post {
+    margin-bottom: 70px;
+    font-family: 'Montserrat';
+
+}
+
+.post h1 a, .post h1 a:visited {
+    color: #000000;
+}
+
+nav {
+    width:960px;
+    margin: 0 auto;
+}
+
+nav:before {
+    content:'';
+    display: block;
+    height: 50px;
+    width: 100%;
+    background: #000;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 50px;
+}
+
+ul li {
+    float: left;
+}
+
+ul li a {
+    color: #fff;
+    display: block;
+    height: 50px;
+    padding: 0 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 50px;
+}
+
+.exit {
+    color: #03e9f4;
+    font-size: medium;
+}
+body  
+{  
+    margin: 0;  
+    padding: 0;  
+    background-color:#6abadeba;  
+    font-family: 'Arial';  
+}  
+.login{  
+        width: 382px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        padding: 80px;  
+        background: #23463f;  
+        border-radius: 15px ;  
+          
+}  
+h2{  
+    text-align: center;  
+    color: #277582;  
+    padding: 20px;  
+}  
+label{  
+    color: #08ffd1;  
+    font-size: 17px;  
+}  
+#Uname{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+#Pass{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}  
+#log{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: blue;  
+  
+  
+}  
+span{  
+    color: white;  
+    font-size: 17px;  
+}  
+a{  
+    float: right;  
+    background-color: grey;  
+}
