@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+  postgres:
+    container_name: postgresql_db2022
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /pgdata_within_container
+    volumes:
+      - ./pgdata:/pgdata_within_container
+    ports:
+      - "45678:5432"
