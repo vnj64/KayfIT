@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <div>
+        <p>Ваш профиль</p> 
+        <p>{{user.get_username}}</p>
+        <h2>Совершено покупок на <span class="price" style="color:black"><b>2135 RUB</b></span></h2>
+    </div>
+    <div>
+        <br><a href="{% url 'home' %}"><button>Вернуться на главную страницу</button></a></br>
+    </div>
+    {% endif %}
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ресторан KayfIT</title>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+    <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/scroll.js' %}">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+
+
+</head>
+<body>
+   {% if user.is_authenticated %}
+    <div>
+        <br><a href="{% url 'logout' %}?next={{request.path}}"><li><button class="btn btn-danger"><i class="fas fa-right-to-bracket"></i>Выйти</button></li></a></a>
+        <p>Добро пожаловать, {{user.get_username}}</p>
+    </div>
+    {% else %}
+    <div>
+        <br><a href="{% url 'signupuser' %}"><button>Зарегистрироваться</button></a></br>
+    </div>
+    {% endif %}
+<body>
+    <head>
+        <style>
+            table.text {
+                width: 100%
+            }
+            table.text td {
+                width: 50%;
+                vertical-align: top;
+            }
+            td.rightcol {
+                text-align: right;
+            }
+        </style>
+    </head>
+</body>
+<body>
+    <table class="button-reg">
+        <tr>
+            <td><br><a href="{% url 'basket' %}"><button>Корзина</button></a></br></td>
+            <td><br><a href="{% url 'profileuser' %}"><button class="profile">Профиль</button></a></br></h3></td>
+        </tr>
+    </table>
+</body>
+</body>
+<body>
+    <div class="page-header">
+        <h1 align="center">Menu</h1>
+    </div>
+    
+    {% for product in products %}
+    <div class="post">
+        <h2 align="left">{{ product.title }}</h2>
+        <p align="left">{{ product.price }} RUB</p>
+        <img src="{{ product.image.url }}" width="260" height="260" alt="Ало?">    
+        <a href="" class="border-button">Добавить в корзину</a>
+    </div>
+    {% if product.url %}
+    <div id="openModal" class="modal">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h3 class="modal-title">Описание</h3>
+            <a href="#close" title="Close" class="close">×</a>
+            </div>
+            <div class="modal-body">    
+            <p>{{product.description}}</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% endfor %}    
+</body>
+<body>
+    <h2 align="center">INFORM STAND</h2>
+    <head>
+        <title>Information</title>
+        <style>
+            table.text{
+                width: 100%;
+                border-spacing: 0;
+            }
+            table.text td {
+                width: 50%;
+                vertical-align: top;
+            }
+            td.rightcol {
+                text-align: right;
+            }
+        </style>
+    </head>
+    <body>
+        <table class="text">
+            <tr>
+                <td><h3>inst: qxzidisk</h3></td>
+                <td><h3>8-917-211-21-11</h3></td>
+                <td><h3>kayfit@gmail.com</h3></td>
+            </tr>
+        </table>
+    </body>
+</body>
+<body>
+    <div class="map">
+        <h1>Местоположение</h1>
+        <div id='map' width="100%" style='height:400px'></div>
+        <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoic2lyaXVzZGV2cyIsImEiOiJjbDF3YmJ6ZnMwM3Z4M29ta2tjdmNnZHBiIn0.5_AfG0yijkZHd6heg33ChQ';
+        var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [39.9801027,43.403336],
+        zoom: 12,
+        bearing: 180
+        });
+        </script>
+    </div>
+</body>
+<body>
+    <html lang="en">
+
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="container">
+    <i class="fa fa-apple" id="apple"></i>
+    <i class="fa fa-twitter" id="twitter"></i>
+    <i class="fa fa-github-square github" id="github"></i>
+    <i class="fa fa-facebook-square" id="facebook"></i>
+  </div>
+</body>
+
+</html>
+</body>
+</html>

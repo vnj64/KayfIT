@@ -1,0 +1,32 @@
+{% load static %}
+{% load i18n %}
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Interactive maps for Django web apps</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+    <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+   <h1>Mapbox</h1>
+   <div id='map' width="100%" style='height:400px'></div>
+   <script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2lyaXVzZGV2cyIsImEiOiJjbDF3YmJ6ZnMwM3Z4M29ta2tjdmNnZHBiIn0.5_AfG0yijkZHd6heg33ChQ';
+    var map = new mapboxgl.Map({
+     container: 'map',
+     style: 'mapbox://styles/mapbox/streets-v11',
+     //style: 'mapbox://styles/siriusdevs/cl1wqm7sc004b15o9v1ze78g2',
+     center: [39.9801027,43.403336],
+     zoom: 12,
+     bearing: 180
+    });
+   </script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата</title>
+    <link rel="stylesheet" href="{% static 'css/payment.css' %}">
+</head>
+<body>
+    
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+
+        <div class="row">
+          <div class="col-50">
+            <h3>Информация о пользователе</h3>
+            <label for="fname"><i class="fa fa-user"></i> Имя</label>
+            <input type="text" id="fname" name="firstname" placeholder="Kamil Khab">
+            <label for="email"><i class="fa fa-envelope"></i> Почтовый адрес</label>
+            <input type="text" id="email" name="email" placeholder="kamil@example.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Адрес</label>
+            <input type="text" id="adr" name="address" placeholder="Voskresenskaya 12">
+            <label for="city"><i class="fa fa-institution"></i> Город</label>
+            <input type="text" id="city" name="city" placeholder="Sochi">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">Состояние</label>
+                <input type="text" id="state" name="state" placeholder="NY">
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Оплата</h3>
+            <label for="fname">Банковская карта</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Пользователь карты</label>
+            <input type="text" id="cname" name="cardname" placeholder="Kamil Khabibullin">
+            <label for="ccnum">Номер карты</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Срок истечения</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="01/24">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Истекающий год</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2018">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Адрес доставки совпадает с адресом выставления счета
+        </label>
+        <input type="submit" value="Continue to checkout" class="btn">
+      </form>
+    </div>
+  </div>
+
+  <div class="col-25">
+    <div class="container">
+      <h4>Корзина
+        <span class="price" style="color:black">
+          <i class="fa fa-shopping-cart"></i>
+          <b>4</b>
+        </span>
+      </h4>
+      <p><a href="#">Чебупицца Пеперони</a> <span class="price">25 RUB</span></p>
+      <p><a href="#">Пельмешки</a> <span class="price">350 RUB</span></p>
+      <p><a href="#">Пиво</a> <span class="price">260 RUB</span></p>
+      <p><a href="#">Чак-чак</a> <span class="price">1500 RUB</span></p>
+      <hr>
+      <p>Сумма <span class="price" style="color:black"><b>2135 RUB</b></span></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
